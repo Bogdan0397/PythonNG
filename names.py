@@ -1,16 +1,10 @@
-def likes(names):
-    # your code here
+def calculate_years(principal, interest, tax, desired):
+    counter = 0
+    P = principal
+    while P < desired:
+        P = P + ((P * interest) * (1-tax))
+        counter += 1
 
+    return counter
 
-    if len(names) == 1:
-        return f"{names[0]} likes this"
-    elif len(names) == 2:
-        return f"{names[0]} and {names[1]} likes this"
-    elif len(names) == 3:
-        return f"{names[0]}, {names[1]} and {names[2]} likes this"
-    elif len(names) > 3:
-        return f"{names[0]}, {names[1]} and {len(names) - 2} others likes this"
-
-    return "no one likes this"
-
-print(likes(['Peter']))
+print(calculate_years(1000, 0.05, 0.18, 1100))  # Output: 3
