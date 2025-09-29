@@ -16,12 +16,17 @@ class Point:
         print("__init__" + str(self))
         self.x = x
         self.y = y
+        print(self.sqr(self.x, self.y))
 
     @classmethod
     def validate(cls):
         if cls.__Singleton is None:
             return False
         return True
+
+    @staticmethod
+    def sqr(x,y):
+        return x*y
 
 
 p1 = Point(1,2)
