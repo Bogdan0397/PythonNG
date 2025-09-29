@@ -17,6 +17,12 @@ class Point:
         self.x = x
         self.y = y
 
+    @classmethod
+    def validate(cls):
+        if cls.__Singleton is None:
+            return False
+        return True
+
 
 p1 = Point(1,2)
 p2 = Point(3,4)
