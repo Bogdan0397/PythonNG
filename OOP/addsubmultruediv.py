@@ -25,7 +25,7 @@ class Clock:
         if isinstance(sc,Clock):
             sc = other.seconds
 
-        return Clock(self.seconds + sc)
+        return self.__class__(self.seconds + sc) # Щоб не звертись до Clock() напряму
 
     def __radd__(self, other):
         return self + other
