@@ -1,4 +1,4 @@
-class Vector(list):
+class Vector():
     def __str__(self):
         return " ".join(map(str,self))
 
